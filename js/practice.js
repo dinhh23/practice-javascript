@@ -8,8 +8,11 @@ let companies = [
 ];
 
 const display = () => {
+    // 1: get programmatic access to the TBODY tag
     let tbody = document.getElementById("tbody");
+    // 2: clear 
     tbody.innerHTML = "";
+
     for(let c of companies) {
        let tr = "<tr>";
        tr += `<td>${c.id}</td>`;
@@ -18,4 +21,4 @@ const display = () => {
        tr += "</tr>";
        tbody.innerHTML += tr;
     }
-}
+};
